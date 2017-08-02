@@ -1,0 +1,14 @@
+# http://sequel.jeremyevans.net/rdoc/files/doc/migration_rdoc.html
+# http://sequel.jeremyevans.net/rdoc/files/doc/schema_modification_rdoc.html
+
+Sequel.migration do
+  up do
+    create_table(:table_name) do
+      primary_key :id
+    end
+  end
+
+  down do
+    drop_table(:table_name)
+  end
+end
